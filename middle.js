@@ -20,23 +20,23 @@ const assertArraysEqual = function(actual, expected) {
   return message;
 };
 
-const middle = function (array) {
-const length = array.length  
-const middleArray = [];
-if (length <= 2) {
-  middleArray.push()
-}
-if (length > 2 && length % 2 === 0) {
-  const middleEven = Math.floor((length - 1) / 2);
-  middleArray.push(array[middleEven]);
-  middleArray.push(array[middleEven + 1]);
-}
-if (length > 2 && length % 2 !== 0) {
-  const middleEven = Math.floor(length / 2);
-  middleArray.push(array[middleEven]);
-}
-return middleArray
-}
+const middle = function(array) {
+  const length = array.length;
+  const middleArray = [];
+  if (length <= 2) {
+    middleArray.push();
+  }
+  if (length > 2 && length % 2 === 0) {
+    const middleEven = Math.floor((length - 1) / 2);
+    middleArray.push(array[middleEven]);
+    middleArray.push(array[middleEven + 1]);
+  }
+  if (length > 2 && length % 2 !== 0) {
+    const middleEven = Math.floor(length / 2);
+    middleArray.push(array[middleEven]);
+  }
+  return middleArray;
+};
 
 console.log(assertArraysEqual(middle([1, 5, 9, 4, 11, 12]), [9, 4]));
 console.log(assertArraysEqual(middle([1, 2, 3]), []));
