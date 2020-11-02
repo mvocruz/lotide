@@ -1,12 +1,4 @@
-const assertEqual = function(actual, expected) {
-  let message = '';
-  if (actual !== expected) {
-    message += console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    message += console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  }
-  return message;
-};
+const assertEqual = require('./assertEqual');
 
 const tail = function (array) {
   let tailNumbers = [];
@@ -18,3 +10,5 @@ const tail = function (array) {
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 const toCompare =  ["Lighthouse", 1];
 assertEqual(result.join(), toCompare.join()); 
+
+module.exports = tail;
